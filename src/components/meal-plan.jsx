@@ -211,7 +211,7 @@ export function MealPlan() {
                 <div className="flex items-center justify-between">
                   <span className="font-medium">Spinach</span>
                   <div className="text-muted-foreground">
-                    <span>1/2 cup"</span>
+                    <span>1/2 cup</span>
                   </div>
                 </div>
               </div>
