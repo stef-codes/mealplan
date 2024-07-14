@@ -39,7 +39,9 @@ export function MealPlan() {
     script.innerHTML = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Recipe",
+      "author": "ChefItUp",
       "name": "Weekly Grocery List",
+      "description": "A comprehensive grocery list for a week of meal plans.",
       "recipeIngredient": [
         "2 lbs Chicken Breasts",
         "5 heads Broccoli",
@@ -50,8 +52,22 @@ export function MealPlan() {
         "1.5 cups Quinoa"
       ],
       "recipeInstructions": [
-        "Purchase the listed ingredients."
-      ]
+        {
+          "@type": "HowToStep",
+          "text": "Purchase the listed ingredients."
+        }
+      ],
+      "image": "/path/to/your/image.jpg",  // Replace with the path to your image
+      "prepTime": "PT0M",
+      "cookTime": "PT0M",
+      "totalTime": "PT0M",
+      "recipeYield": "Grocery List",
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/Comment",
+        "userInteractionCount": "0"
+      },
+      "suitableForDiet": "https://schema.org/LowFatDiet"
     });
     document.head.appendChild(script);
 
@@ -194,7 +210,7 @@ export function MealPlan() {
                 <div className="flex items-center justify-between">
                   <span className="font-medium">Spinach</span>
                   <div className="text-muted-foreground">
-                    <span>1/2 cup</span>
+                    <span>1/2 cup"</span>
                   </div>
                 </div>
               </div>
