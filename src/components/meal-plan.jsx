@@ -154,7 +154,7 @@ export function MealPlan() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-background rounded-lg shadow-lg overflow-hidden">
             <img
-              src="/placeholder.svg"
+              src="/chicken_and_broccoli_recipe.jpeg"
               alt="Meal 1"
               width={400}
               height={300}
@@ -186,7 +186,7 @@ export function MealPlan() {
           </div>
           <div className="bg-background rounded-lg shadow-lg overflow-hidden">
             <img
-              src="/placeholder.svg"
+              src="/baked sweet potato and scrambled eggs recipe.jpeg"
               alt="Meal 2"
               width={400}
               height={300}
@@ -218,7 +218,7 @@ export function MealPlan() {
           </div>
           <div className="bg-background rounded-lg shadow-lg overflow-hidden">
             <img
-              src="/placeholder.svg"
+              src="/quinoa_veggie_bowl_recipe.jpeg"
               alt="Meal 3"
               width={400}
               height={300}
