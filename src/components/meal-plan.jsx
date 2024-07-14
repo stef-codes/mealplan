@@ -17,11 +17,52 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
-import Link from "next/link"
+"use client"; // Ensure the component is a Client Component
+
+import { useEffect } from 'react';
+import Link from 'next/link';
 
 export function MealPlan() {
+  useEffect(() => {
+    // Load Instacart widget script
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://widgets.instacart.com/widget-bundle-v2.js"; js.async = true;
+      js.dataset.source_origin = "affiliate_hub"; fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "standard-instacart-widget-v1");
+
+    // Add JSON-LD script for the grocery list schema
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Recipe",
+      "name": "Weekly Grocery List",
+      "recipeIngredient": [
+        "2 lbs Chicken Breasts",
+        "5 heads Broccoli",
+        "2.5 cups Brown Rice",
+        "14 count Eggs",
+        "5 medium Sweet Potatoes",
+        "1.5 lbs Spinach",
+        "1.5 cups Quinoa"
+      ],
+      "recipeInstructions": [
+        "Purchase the listed ingredients."
+      ]
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      // Clean up the script on component unmount
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
-    (<div>
+    <div>
       <header className="bg-background shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <nav className="flex gap-4">
@@ -89,6 +130,9 @@ export function MealPlan() {
           </div>
           <div className="mt-4 flex justify-between items-center">
             <span className="text-muted-foreground">Total: $30.53</span>
+          </div>
+          <div className="flex justify-center mt-4">
+            <div id="shop-with-instacart-v1" data-affiliate_id="4875" data-source_origin="affiliate_hub" data-affiliate_platform="recipe_widget"></div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -190,6 +234,9 @@ export function MealPlan() {
           </div>
         </div>
       </div>
-    </div>)
+    </div>
   );
 }
+
+
+
