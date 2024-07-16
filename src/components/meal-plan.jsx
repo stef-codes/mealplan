@@ -99,7 +99,7 @@ export function MealPlan() {
         </div>
       </header>
       <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 p-4 md:p-8">
-        <div className="bg-background rounded-lg shadow-lg p-6 sticky top-4">
+        <div className="bg-background rounded-lg shadow-lg p-6 top-4">
           <h2 className="text-2xl font-bold mb-4">Grocery List</h2>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
