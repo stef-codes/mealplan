@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "ChefItUp",
   description: "meal plans for people with dietary restrictions ",
-  image: "/groceries.jpeg", 
+  image: "https://mealprep-chef.vercel.app/groceries.jpeg", 
   url: "https://mealprep-chef.vercel.app/",
 };
 
