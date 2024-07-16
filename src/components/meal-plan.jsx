@@ -58,7 +58,7 @@ export function MealPlan() {
           "text": "Purchase the listed ingredients."
         }
       ],
-      "image": "/path/to/your/image.jpg",  // Replace with the path to your image
+      "image": "/groceries.jpeg",  // Replace with the path to your image
       "prepTime": "PT0M",
       "cookTime": "PT0M",
       "totalTime": "PT0M",
