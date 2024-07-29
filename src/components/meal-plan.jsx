@@ -102,13 +102,13 @@ export function MealPlan() {
             <Link href="#" className="text-lg font-medium hover:underline" prefetch={false}>
               Home
             </Link>
-            <Link href="#" className="text-lg font-medium hover:underline" prefetch={false}>
+            <Link href="/recipes" className="text-lg font-medium hover:underline" prefetch={false}>
               Recipes
             </Link>
-            <Link href="#" className="text-lg font-medium hover:underline" prefetch={false}>
-              Meal Prep
+            <Link href="/meal-plan" className="text-lg font-medium hover:underline" prefetch={false}>
+              Meal Plans
             </Link>
-            <Link href="#" className="text-lg font-medium hover:underline" prefetch={false}>
+            <Link href="/cookbook" className="text-lg font-medium hover:underline" prefetch={false}>
               Cookbook
             </Link>
           </nav>

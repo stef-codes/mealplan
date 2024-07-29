@@ -14,7 +14,7 @@ const archivo = Archivo({
 export const metadata = {
   title: "ChefItUp",
   description: "meal plans for people with dietary restrictions ",
-  image: "https://mealprep-chef.vercel.app/groceries.jpeg", 
+  image: "/groceries.jpeg", 
   url: "https://mealprep-chef.vercel.app/",
 };
 
