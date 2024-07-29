@@ -1,9 +1,15 @@
 import { Inter } from "next/font/google";
+import { Archivo } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const archivo = Archivo({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: "ChefItUp",
@@ -25,7 +31,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:type" content="website" />
       </Head>
-      <body className={inter.className}>
+      <body className={archivo.className}>
         {children}
         <Analytics />
       </body>
