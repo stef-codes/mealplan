@@ -22,6 +22,7 @@ To read more about using these font, please visit the Next.js documentation:
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; 
+import React from 'react';
 
 
 

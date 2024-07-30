@@ -3,6 +3,7 @@ import { Archivo } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import "./globals.css";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,11 @@ export const metadata = {
   url: "https://mealprep-chef.vercel.app/",
 };
 
-export default function RootLayout({ children }) {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }): LayoutProps {
   return (
     <html lang="en">
       <Head>
