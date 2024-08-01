@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Inter } from "next/font/google";
 import { Archivo } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
@@ -20,10 +21,12 @@ export const metadata = {
 };
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export default function RootLayout({ children }): LayoutProps {
+export default function RootLayout({
+  children}: Readonly<{children: React.ReactNode}>) 
+  {
   return (
     <html lang="en">
       <Head>
