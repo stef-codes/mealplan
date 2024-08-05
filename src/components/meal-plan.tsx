@@ -106,7 +106,7 @@ export function MealPlan() {
             <Link href="/recipes" className="text-lg font-medium hover:underline" prefetch={false}>
               Recipes
             </Link>
-            <Link href="#" className="text-lg font-medium hover:underline" prefetch={false}>
+            <Link href="generator" className="text-lg font-medium hover:underline" prefetch={false}>
               Generate
             </Link>
             <Link href="/meal-plan" className="text-lg font-medium hover:underline" prefetch={false}>
